@@ -344,8 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd054273c28af8e4d9efb6e9a267662c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 0
-  line: 0
+  timer: 5
   barrel: {fileID: 8312595683497263542, guid: 8db711bb5db02294fac248911412c829, type: 3}
 --- !u!1 &1172147217
 GameObject:

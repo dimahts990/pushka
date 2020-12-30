@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 7520089760856236131}
   - component: {fileID: 3814769787733651834}
   - component: {fileID: 5202578002266992882}
+  - component: {fileID: 1079084972484607521}
   m_Layer: 0
   m_Name: bochka
-  m_TagString: Untagged
+  m_TagString: web
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,9 +108,22 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8312595683497263542}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.011680594
   m_Height: 0.020321969
   m_Direction: 2
   m_Center: {x: -0.00013913093, y: -2.422538e-19, z: 0.00006905631}
+--- !u!114 &1079084972484607521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312595683497263542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a363ee92933ac7c488550986cf693aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 0
