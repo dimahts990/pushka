@@ -7,7 +7,8 @@ public class gunMove : MonoBehaviour
     private RaycastHit hit;
     private bool readyFier;
 
-    public GameObject gun,gunPlatform;
+    public GameObject gun,trCoreGenerate,gunPlatform,corePrefab;
+
     private void Update()
     {
 
@@ -29,7 +30,9 @@ public class gunMove : MonoBehaviour
     {
         if (readyFier == true)
         {
-            Debug.Log("fier");
+            GameObject core = Instantiate(corePrefab, trCoreGenerate.transform.position, Quaternion.identity);
+            core.transform.parent = null;
+            core.GetComponent<Rigidbody>().AddForce(trCoreGenerate.transform.forward * 4000f, ForceMode.Force);
             readyFier = false;
         }
     }
