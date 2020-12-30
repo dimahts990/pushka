@@ -28,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8312595683497263542}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -0.42, y: 1, z: 10.915}
+  m_LocalRotation: {x: -0.7069834, y: 0, z: 0, w: 0.7072302}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 61.005566, y: 61.005566, z: 75.1416}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
 --- !u!33 &5744427647932535977
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -126,4 +126,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a363ee92933ac7c488550986cf693aed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  barrel_die: {fileID: 1706936588724030998, guid: cdc9b0445e23ba141b6fd29ef51da65a, type: 3}
   type: 0

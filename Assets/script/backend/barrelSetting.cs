@@ -5,7 +5,9 @@ using UnityEngine;
 public class barrelSetting : MonoBehaviour
 {
     private GameObject barrel;
+    public GameObject barrel_die;
     public int type;
+
     void Start()
     {
         barrel = this.gameObject;
@@ -36,6 +38,8 @@ public class barrelSetting : MonoBehaviour
     void Die(GameObject obj)
     {
         Destroy(obj);
+        GameObject die = Instantiate(barrel_die, transform.position, Quaternion.Euler(transform.rotation.eulerAngles));
+        die.GetComponent<Rigidbody>().AddExplosionForce(480, transform.position, 2f, 3f);
         Destroy(this.gameObject);
     }
 }
