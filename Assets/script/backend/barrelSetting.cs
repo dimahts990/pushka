@@ -5,7 +5,9 @@ using UnityEngine;
 public class barrelSetting : MonoBehaviour
 {
     private GameObject barrel;
-    public GameObject barrel_die;
+    private int core;
+    private bool add;
+    public GameObject barrel_die,addCore;
     public int type;
 
     void Start()
@@ -13,11 +15,13 @@ public class barrelSetting : MonoBehaviour
         barrel = this.gameObject;
         switch (type)
         {
-            case 1:
-                Debug.Log($"обычная бочка дающая {Random.Range(1, 6).ToString()} снарядов");
+            case 10:
+                core = Random.Range(1, 6);
+                add = false;
                 break;
-            case 2:
-                Debug.Log("бочка, которая должна всё взорвать");
+            default:
+                core = Random.Range(1, 6);
+                add = true;
                 break;
         }
     }
@@ -38,8 +42,9 @@ public class barrelSetting : MonoBehaviour
     void Die(GameObject obj)
     {
         Destroy(obj);
-        GameObject die = Instantiate(barrel_die, transform.position, Quaternion.Euler(transform.rotation.eulerAngles));
-        die.GetComponent<Rigidbody>().AddExplosionForce(480, transform.position, 2f, 3f);
+        GameObject die = Instantiate(barrel_die, transform.position,Quaternion.Euler(transform.rotation.eulerAngles));
+        Instantiate(addCore, new Vector3(die.transform.position.x, die.transform.position.y + 1.2f, die.transform.position.z), Quaternion.identity).GetComponent<coreBonus>().info(add, core);
+        die.GetComponent<Rigidbody>().AddExplosionForce(1000f, die.transform.position, 10f);
         Destroy(this.gameObject);
     }
 }
