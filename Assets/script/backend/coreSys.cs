@@ -17,7 +17,11 @@ public class coreSys : MonoBehaviour
     private void Update()
     {
         coreInfo.GetComponent<TextMeshPro>().text = $"{coreQuantity} шт.";
-        //coreInfo.GetComponent<TextMesh>().text = $"";
+        if (coreQuantity <= 0)
+        {
+            gameOver.gameover.end();
+        }
     }
+
     public void addCore(int x) => coreQuantity += x;
 }

@@ -8,12 +8,13 @@ public class timerInGame : MonoBehaviour
     private Text tim;
     private int h, m, s;
     private string hs, ms, ss;
-    //private IEnumerator t;
+    private float x;
+    public string allTime;
 
     private void Awake()
     {
         tim = this.gameObject.GetComponent<Text>();
-        //t = whaitAndPrint();
+        
     }
 
     private void Update()
@@ -26,36 +27,32 @@ public class timerInGame : MonoBehaviour
         if (h < 10) hs = $"0{h}";
         else hs = $"{h}";
 
-        if (h > 0) tim.text = $"{hs}:{ms}:{ss}";
-        else tim.text = $"{ms}:{ss}";
+        if (h > 0) allTime = $"{hs}:{ms}:{ss}";
+        else allTime = $"{ms}:{ss}";
+        tim.text = allTime;
         #endregion
 
-        
-
-
-        //StartCoroutine(t);
-    }
-
-    /*private IEnumerator whaitAndPrint()
-    {
-        yield return new WaitForSeconds(1);
-
-        if (s <= 59)
+        x += Time.deltaTime;
+        if (x >= 1)
         {
-            s++;
-        }
-        else
-        {
-            s=0;
-            if (m <= 59)
+            if (s <= 59)
             {
-                m++;
+                s++;
             }
             else
             {
-                m = 0;
-                h++;
+                s = 0;
+                if (m <= 59)
+                {
+                    m++;
+                }
+                else
+                {
+                    m = 0;
+                    h++;
+                }
             }
+            x = 0;
         }
-    }*/
+    }
 }
