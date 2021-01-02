@@ -11,7 +11,6 @@ public class gunMove : MonoBehaviour
 
     private void Update()
     {
-
         if (Input.GetMouseButton(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -28,11 +27,13 @@ public class gunMove : MonoBehaviour
     }
     private void Fier()
     {
-        if (readyFier == true)
+        bool ready = (coreSys.coresys.coreQuantity > 0) ? true :  false;
+        if (readyFier == true && ready==true)
         {
             GameObject core = Instantiate(corePrefab, trCoreGenerate.transform.position, Quaternion.identity);
             core.transform.parent = null;
             core.GetComponent<Rigidbody>().AddForce(trCoreGenerate.transform.forward * 4000f, ForceMode.Force);
+            coreSys.coresys.addCore(-1);
             readyFier = false;
         }
     }

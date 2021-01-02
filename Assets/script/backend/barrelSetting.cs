@@ -44,6 +44,8 @@ public class barrelSetting : MonoBehaviour
         Destroy(obj);
         GameObject die = Instantiate(barrel_die, transform.position,Quaternion.Euler(transform.rotation.eulerAngles));
         Instantiate(addCore, new Vector3(die.transform.position.x, die.transform.position.y + 1.2f, die.transform.position.z), Quaternion.identity).GetComponent<coreBonus>().info(add, core);
+        if (add == true) coreSys.coresys.addCore(core);
+        else coreSys.coresys.addCore(core * -1);
         die.GetComponent<Rigidbody>().AddExplosionForce(1000f, die.transform.position, 10f);
         Destroy(this.gameObject);
     }
