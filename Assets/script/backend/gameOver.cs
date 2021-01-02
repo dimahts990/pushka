@@ -18,12 +18,14 @@ public class gameOver : MonoBehaviour
 
     public void end()
     {
+        Time.timeScale = 0;
         itog.text = $"Ты продержался {tig.allTime}";
         Panel.SetActive(true);
     }
 
     public void reStart()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene("game");
     }
 }

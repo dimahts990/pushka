@@ -6,14 +6,24 @@ public class barrelGen : MonoBehaviour
 {
     private float t;
     public float timer;
-    public GameObject barrel,barrelD;
+    public GameObject barrel,barrelD,bareelBaBah;
     void Update()
     {
         if (t <= 0)
         {
-            int D = Random.Range(0, 3);
-            if(D==2) genD(Random.Range(1, 5));
-            else gen(Random.Range(1,5));
+            int D = Random.Range(0, 4);
+            switch (D)
+            {
+                case 2:
+                    genD(Random.Range(1, 5));
+                    break;
+                case 3:
+                    genBabah(Random.Range(1, 5));
+                    break;
+                default:
+                    gen(Random.Range(1, 5));
+                    break;
+            }
             t = timer;
         }
         else t-=Time.deltaTime;
@@ -75,5 +85,31 @@ public class barrelGen : MonoBehaviour
                 break;
         }
     }
-
+    void genBabah(int line)
+    {
+        GameObject newBarrel;
+        switch (line)
+        {
+            case 1:
+                newBarrel = Instantiate(bareelBaBah, new Vector3(Random.Range(-2.4f, 2.4f), -3.1f, 10), Quaternion.Euler(new Vector3(Random.Range(45f, 136f), 90f, 0f)));
+                newBarrel.GetComponent<barrelSetting>().type = 11;
+                newBarrel.GetComponent<Rigidbody>().AddForce(transform.up * Random.Range(480f, 670f));
+                break;
+            case 2:
+                newBarrel = Instantiate(bareelBaBah, new Vector3(Random.Range(-3f, 3.2f), -4.1f, 13), Quaternion.Euler(new Vector3(Random.Range(45f, 136f), 90f, 0f)));
+                newBarrel.GetComponent<barrelSetting>().type = 11;
+                newBarrel.GetComponent<Rigidbody>().AddForce(transform.up * Random.Range(520f, 770f));
+                break;
+            case 3:
+                newBarrel = Instantiate(bareelBaBah, new Vector3(Random.Range(-4f, 4f), -5f, 16), Quaternion.Euler(new Vector3(Random.Range(45f, 136f), 90f, 0f)));
+                newBarrel.GetComponent<barrelSetting>().type = 11;
+                newBarrel.GetComponent<Rigidbody>().AddForce(transform.up * Random.Range(570f, 860f));
+                break;
+            case 4:
+                newBarrel = Instantiate(bareelBaBah, new Vector3(Random.Range(-5f, 5f), -6f, 19), Quaternion.Euler(new Vector3(Random.Range(45f, 136f), 90f, 0f)));
+                newBarrel.GetComponent<barrelSetting>().type = 11;
+                newBarrel.GetComponent<Rigidbody>().AddForce(transform.up * Random.Range(680f, 930f));
+                break;
+        }
+    }
 }
