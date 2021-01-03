@@ -32,7 +32,7 @@ public class gunMove : MonoBehaviour
         {
             GameObject core = Instantiate(corePrefab, trCoreGenerate.transform.position, Quaternion.identity);
             core.transform.parent = null;
-            core.GetComponent<Rigidbody>().AddForce(trCoreGenerate.transform.forward * 4000f, ForceMode.Force);
+            core.GetComponent<Rigidbody>().AddForce(trCoreGenerate.transform.forward * 3500f);
             coreSys.coresys.addCore(-1);
             readyFier = false;
         }

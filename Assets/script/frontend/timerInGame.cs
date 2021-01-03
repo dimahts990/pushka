@@ -32,7 +32,8 @@ public class timerInGame : MonoBehaviour
         tim.text = allTime;
         #endregion
 
-        x += Time.deltaTime;
+        if (gameOver.gameover.gameOn == true) x += Time.deltaTime;
+        
         if (x >= 1)
         {
             if (s <= 59)
