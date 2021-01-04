@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4366918587141291354}
   m_Layer: 0
   m_Name: bochkBbabah
-  m_TagString: web
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/game.unity
+    path: Assets/Scenes/menu.unity
+    guid: 6769a510d7d79c4448914f3468959f57
+  - enabled: 1
+    path: Assets/Scenes/classic.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/timeKiller.unity
+    guid: 2fa78b78a32afa142b368dd3f80ff283
   m_configObjects: {}

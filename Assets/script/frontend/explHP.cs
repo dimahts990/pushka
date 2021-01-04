@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class explHP : MonoBehaviour
+public class explHP : MonoBehaviour //скрипт для отображения пропущенных бочек
 {
     public GameObject hp1,hp2,hp3;
     public int hp;
@@ -23,6 +23,7 @@ public class explHP : MonoBehaviour
     }
     public void mHP()
     {
+        Handheld.Vibrate();
         hp--;
         switch (hp)
         {

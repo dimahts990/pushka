@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6701291305957659222}
   m_Layer: 0
   m_Name: Cylinder_cell_cell
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 5217280102794837092}
   m_Layer: 0
   m_Name: Cylinder_cell_cell.001
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -241,7 +241,7 @@ GameObject:
   - component: {fileID: 3149018692616190821}
   m_Layer: 0
   m_Name: Cylinder_cell_cell.003
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -353,7 +353,7 @@ GameObject:
   - component: {fileID: -4458482442133455038}
   m_Layer: 0
   m_Name: bochka_destroy
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -420,6 +420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a405dba3205844a9fff6224c4e0cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crack: {fileID: 0}
 --- !u!1 &5850017424496938625
 GameObject:
   m_ObjectHideFlags: 0
@@ -435,7 +436,7 @@ GameObject:
   - component: {fileID: 4734221651482111564}
   m_Layer: 0
   m_Name: Cylinder_cell_cell.002
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -548,7 +549,7 @@ GameObject:
   - component: {fileID: 5964182001408907987}
   m_Layer: 0
   m_Name: Cylinder_cell_cell.005
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -661,7 +662,7 @@ GameObject:
   - component: {fileID: 2122269636988807397}
   m_Layer: 0
   m_Name: Cylinder_cell_cell.004
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

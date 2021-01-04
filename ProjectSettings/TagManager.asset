@@ -6,6 +6,7 @@ TagManager:
   tags:
   - web
   - core
+  - barrel
   layers:
   - Default
   - TransparentFX

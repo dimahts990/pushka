@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class gameOver : MonoBehaviour
+public class gameOver : MonoBehaviour//по названию понятно: скрипт вызывается после проигрыша игрока и предлагает дальнейшие действия
 {
     public static gameOver gameover;
     public GameObject Panel;
@@ -22,12 +22,16 @@ public class gameOver : MonoBehaviour
     public void end()
     {
         gameOn = false;
-        itog.text = $"Ты продержался {tig.allTime}";
+        itog.text = (SceneManager.GetActiveScene().name== "classic") ?$"Твой счёт {score.Score.scoreQuantity}": $"Ты продержался {tig.allTime}";
         Panel.SetActive(true);
     }
 
     public void reStart()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene((SceneManager.GetActiveScene().name == "classic")? "classic": "timeKiller");
+    }
+    public void backToMenu()
+    {
+        SceneManager.LoadScene("menu");
     }
 }

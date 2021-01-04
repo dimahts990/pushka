@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class barrelSetting : MonoBehaviour
+public class barrelSetting : MonoBehaviour//настройка бочек (от настройки типа бочки до их поведения в тех или иных ситуациях
 {
     private GameObject barrel;
     private int core;
@@ -31,24 +32,43 @@ public class barrelSetting : MonoBehaviour
 
     void Update()
     {
-        if (barrel.transform.position.y <= -14f) Destroy(barrel);
-        transform.Rotate(new Vector3(1, 1, 1));
+        if (barrel.transform.position.y <= -14f && type!=10 && type!=11)
+        {
+            if (SceneManager.GetActiveScene().name == "classic") explHP.exp.mHP();
+            Destroy(barrel);
+        }
+        else if(barrel.transform.position.y <= -14f) Destroy(barrel);
+        transform.Rotate(new Vector3(Random.Range(0.1f,1.1f), Random.Range(0.1f, 1.1f), Random.Range(0.1f, 1.1f)));
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "core") Die(other.gameObject);
+        if (other.tag == "core") Die();
     }
 
-    void Die(GameObject obj)
+    void Die()
     {
-        Destroy(obj);
         GameObject die = Instantiate(barrel_die, transform.position,Quaternion.Euler(transform.rotation.eulerAngles));
         if (type != 11)
         {
             Instantiate(addCore, new Vector3(die.transform.position.x, die.transform.position.y + 1.2f, die.transform.position.z), Quaternion.identity).GetComponent<coreBonus>().info(add, core);
-            if (add == true) coreSys.coresys.addCore(core);
-            else coreSys.coresys.addCore(core * -1);
-        }
+            if (add == true)
+            {
+                if (SceneManager.GetActiveScene().name == "classic")
+                {
+                    coreSys.coresys.addCore(core);
+                    score.Score.ScoreAdd(core);
+                }
+                else
+                {
+                    endTime.endtime.AddTime(core);
+                }
+            }
+            else
+            {
+                if (SceneManager.GetActiveScene().name == "classic") coreSys.coresys.addCore(core * -1);
+                else endTime.endtime.AddTime(core * -1);
+            }
+            }
         else explHP.exp.mHP();
 
         die.GetComponent<Rigidbody>().AddExplosionForce(1000f, die.transform.position, 10f);

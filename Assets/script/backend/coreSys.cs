@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class coreSys : MonoBehaviour
+public class coreSys : MonoBehaviour//отображения количества снарядов
 {
     public GameObject coreInfo;
     public static coreSys coresys;
@@ -16,10 +17,13 @@ public class coreSys : MonoBehaviour
     }
     private void Update()
     {
-        coreInfo.GetComponent<TextMeshPro>().text = $"{coreQuantity} шт.";
-        if (coreQuantity <= 0)
+        if (SceneManager.GetActiveScene().name == "classic")
         {
-            gameOver.gameover.end();
+            coreInfo.GetComponent<TextMeshPro>().text = (coreQuantity > 0) ? $"{coreQuantity} шт." : "0 шт.";
+            if (coreQuantity <= 0)
+            {
+                gameOver.gameover.end();
+            }
         }
     }
 

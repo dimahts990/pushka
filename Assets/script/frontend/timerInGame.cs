@@ -3,33 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class timerInGame : MonoBehaviour
+public class timerInGame : MonoBehaviour//общий ход времени игры
 {
-    private Text tim;
-    private int h, m, s;
+    public int h, m, s;
     private string hs, ms, ss;
     private float x;
     public string allTime;
 
-    private void Awake()
-    {
-        tim = this.gameObject.GetComponent<Text>();
-        
-    }
-
     private void Update()
     {
         #region clock
-        if (s < 10) ss = $"0{s}";
-        else ss = $"{s}";
-        if (m < 10) ms = $"0{m}";
-        else ms = $"{m}";
-        if (h < 10) hs = $"0{h}";
-        else hs = $"{h}";
+        ss = (s < 10) ? $"0{s}" : $"{s}";
+        ms = (m < 10) ? $"0{m}" : $"{m}";
+        hs = (h < 10) ? $"0{h}" : $"{h}";
 
-        if (h > 0) allTime = $"{hs}:{ms}:{ss}";
-        else allTime = $"{ms}:{ss}";
-        tim.text = allTime;
+        allTime = (h > 0) ? $"{hs}:{ms}:{ss}" : $"{ms}:{ss}";
         #endregion
 
         if (gameOver.gameover.gameOn == true) x += Time.deltaTime;

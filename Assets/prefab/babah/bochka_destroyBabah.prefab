@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 909751422377914603}
   m_Layer: 0
   m_Name: Cylinder_cell_cell.005
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ GameObject:
   - component: {fileID: 2294096330264511604}
   m_Layer: 0
   m_Name: Cylinder_cell_cell.002
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -240,7 +240,7 @@ GameObject:
   - component: {fileID: 2037131301893297530}
   m_Layer: 0
   m_Name: bochka_destroyBabah
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -310,6 +310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15a405dba3205844a9fff6224c4e0cc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  crack: {fileID: 0}
 --- !u!1 &2037170466861345924
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,7 +326,7 @@ GameObject:
   - component: {fileID: 8491148035262222685}
   m_Layer: 0
   m_Name: Cylinder_cell_cell.003
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,7 +439,7 @@ GameObject:
   - component: {fileID: 4834263502668219101}
   m_Layer: 0
   m_Name: Cylinder_cell_cell.004
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -551,7 +552,7 @@ GameObject:
   - component: {fileID: 1585989907697948252}
   m_Layer: 0
   m_Name: Cylinder_cell_cell.001
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -664,7 +665,7 @@ GameObject:
   - component: {fileID: 187696562300352622}
   m_Layer: 0
   m_Name: Cylinder_cell_cell
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -775,7 +776,7 @@ GameObject:
   - component: {fileID: 6261974979371619566}
   m_Layer: 0
   m_Name: Light
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5645,7 +5646,7 @@ GameObject:
   - component: {fileID: 6262027191780329594}
   m_Layer: 0
   m_Name: Smoke
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10515,7 +10516,7 @@ GameObject:
   - component: {fileID: 6260041045938216816}
   m_Layer: 0
   m_Name: Spark
-  m_TagString: Untagged
+  m_TagString: barrel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class coreBonus : MonoBehaviour
+public class coreBonus : MonoBehaviour//скрипт для отображения прибавленя (или отбавления) снарядов (или времени) за поподание в бочку
 {
     private void Update()
     {
