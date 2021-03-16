@@ -25,29 +25,10 @@ public class explHP : MonoBehaviour //скрипт для отображения
     {
         Handheld.Vibrate();
         hp--;
-        switch (hp)
-        {
-            case 3:
-                hp1.SetActive(false);
-                hp2.SetActive(false);
-                hp3.SetActive(false);
-                break;
-            case 2:
-                hp1.SetActive(true);
-                hp2.SetActive(false);
-                hp3.SetActive(false);
-                break;
-            case 1:
-                hp1.SetActive(true);
-                hp2.SetActive(true);
-                hp3.SetActive(false);
-                break;
-            case 0:
-                hp1.SetActive(true);
-                hp2.SetActive(true);
-                hp3.SetActive(true);
-                break;
-        }
+        hp1.SetActive((hp < 3) ? true : false);
+        hp2.SetActive((hp < 2) ? true : false);
+        hp3.SetActive((hp < 1) ? true : false);
+        
         if (hp <= 0)
         {
             gameOver.gameover.end();
